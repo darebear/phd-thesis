@@ -1,0 +1,16 @@
+\newcommand{\im}[3]{
+  \begin{figure}[!ht]
+  \includegraphics[width=#1\columnwidth]{images/#2}
+  \vspace{-10pt}
+  \caption{#3.}
+  \end{figure}
+}
+
+\newcommand{\image}[4]{
+  \begin{figure}[!ht]
+  \includegraphics[width=#1\columnwidth]{images/#2}
+  \vspace{-10pt}
+  \caption{#3.}
+  \label{fig:#4}
+  \end{figure}
+}

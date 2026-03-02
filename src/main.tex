@@ -1,0 +1,134 @@
+\documentclass[11pt,proposal,double]{pitthesis}
+%\documentclass[11pt,proposal,double,draft]{pitthesis}
+
+
+%packages
+%\usepackage{subfiles}
+%\usepackage{graphicx}
+\usepackage[final]{graphicx}
+\usepackage{xcolor}
+\usepackage{subcaption}
+%\usepackage{subfigure}
+\usepackage{hyperref}
+\usepackage{setspace} %single spacing
+\usepackage[]{pdfpages} %single spacing
+\hypersetup{
+    colorlinks=true, % make the links colored
+    linkcolor=blue, % color TOC links in blue
+    urlcolor=red, % color URLs in red
+    linktoc=all % 'all' will create links for everything in the TOC
+}
+
+\newif\ifAMS
+  \IfFileExists{amsfonts.sty}
+    {\AMStrue\usepackage{amsmath,amsthm,amsfonts}}
+    {\usepackage{latexsym}}
+
+
+% Declares the document's title.
+\title{\bf Design of Small, Inexpensive, Environmentally Adaptable Robotic Platforms for Monitoring Applications}
+\proposal{Written Preliminary Exam } % print on title page by 'proposal' option
+\author{Dario J. Canelon}			% Declares the author's name.
+
+% Declares formerly earned degrees
+\degrees{B.S. in M.E., University of Minnesota, Twin Cities, 2009}
+
+% Declares degree to earn
+\degree{Doctor\\of\\Philosophy}
+%\degree{Master of Science\\in\\Electrical Engineering} % for M.S.
+
+\school{Department of Mechanical Engineering}		% for School of Engineering thesis
+\university{University of Minnesota}	% the University
+
+\date{}
+\year{}		% year in title page
+
+\includeonly{
+  parts/cover_page,
+  %parts/ackn,
+  project_summary,
+  project_description,
+  parts/appendix,
+  parts/biosketch,
+  }
+
+
+%%---------------------------------------------------------------------------
+\begin{document}
+%%---------------------------------------------------------------------------
+
+\maketitle		% Produces the title.
+\include{parts/cover_page}
+\include{parts/ackn}
+
+\advisorname{Nikolaos Papanikolopoulos, Professor}   % for PhD thesis abstract page
+%\abstract		% generate the heading of abstract page
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+% Summary page 
+\chapter{Project Summary}
+\input{project_summary} % one-page
+%\includepdf[pages=-]{project_summary_standalone.pdf}
+
+% Project 
+\chapter{Project Description}
+\input{project_description_flat}
+
+%\include{parts/appendix}	% appendices
+
+%\bibliography{parts/library,parts/IROS2012,parts/origami,parts/omnibot}
+\bibliography{bibs/library,bibs/IROS2012,bibs/origami,bibs/omnibot}
+\bibliographystyle{ieeetr}
+
+\chapter*{Biosketch}
+\input{parts/biosketch}
+
+%Graduate Degree Plan
+\includepdf[pages=-]{parts/graduate_degree_plan_filled.pdf}
+
+
+\end{document}		% End of document.
+
+
+%Written Preliminary Exam
+
+% Content
+%The proposal must contain the following sections: a. Cover Page. The cover page must contain the title of the proposal, student’s name, adviser(s)’s name, and the names of the student’s committee members, including which ones will serve as readers. The submission date should also be included.
+
+%b. Project Summary. The Project Summary is a one page, single-spaced summary of the proposed activity. The Project Summary should be a self-contained description of the proposed research. It should include a statement of objectives and methods to be employed. It must address the scientific and/or technical merit of the project, for example, the influence that the results might have on the direction, progress and thinking in relevant scientific or engineering fields. It must also address the appropriateness of the proposed methods, and the logic and feasibility of the research approach.
+
+%The Project Summary should be informative to persons working in the same or related fields and, insofar as possible, understandable to a scientifically or technically literate lay reader.
+
+%c. Project Description. The Project Description is a 30 page (maximum), double-spaced proposal that describes the thesis project. It should include motivation and objectives, background, proposed research, preliminary results, and conclusion. The organization of the document is up to the student, in consultation with the adviser(s). Figures and tables are included in the 30 page limit.
+
+
+% Background and Motivation
+% The background & motivation section should include a critical review of the relevant literature. It should indicate the current state of understanding of the proposed research topic. The review should emphasize how the prior work relates to the proposed study. It should address the significance and limitations of the cited work. If any figures are taken from another publication or a website, they must be referenced explicitly in the caption.
+
+
+%Objectives
+%The objectives section should provide a context for the proposed work as well as specific objectives and expected significance of the Ph.D. dissertation. It should contain a brief overview of the proposed work in relation to the present state of knowledge in the field and to work in progress by others.
+
+%This section should outline the plan of work, including the activities to be undertaken, and a description of experimental and/or computational methods and procedures. It should address what will be done, how it will achieve the proposed objectives, and should contain justification for the approach proposed. The proposed research section should complete the arguments developed earlier and present initial ideas on how to solve the problems posed. Strong proposals avoid repetition and digression. This section (or sections) should relate the proposed activities to the project objectives and provide expected outcomes, including how the proposed research, if successful, will contribute to a greater understanding of the topical area. An assessment of risk should be provided with the proposed research as well as a contingency plan in case a particular research avenue proves inexpedient in some manner. It should present a reasoned path from where the student begins to where they want to be at the end of the research. 
+
+%Proposed Research 
+% The proposed research section should complete the arguments developed earlier and present initial ideas on how to solve the problems posed. Avoid repetitions and digressions. It should relate the proposed activities to the project objectives and provide expected outcomes, including how the proposed research, if successful, will contribute to a greater understanding of the topical area. An assessment of risk should be provided with the proposed research as well as a contingency plan in case a particular research avenue proves inexpedient in some manner. It should present a reasoned path from where the student begins to where they want to be at the end of the research.
+
+%Preliminary Results
+% The preliminary results section should provide an overview of completed  work including its significance.  
+
+%Conclusion 
+% Provide a concise summary of what will be known when the research has been completed that is not known. It must present the scientific and/or technical merit of the project.
+
+%d. References. Reference information is required. Each reference must include the names of all authors (in the same sequence in which they appear in the publication), the article and journal title, book title, volume number, page numbers, and year of publication. Proposers must be especially careful to follow accepted scholarly practices in providing citations for source materials, including websites, relied upon when preparing any section of the proposal. There is no page limitation for the references, but this section must include cited references only. References should be single-spaced, but a blank line between each individual reference is preferred.
+
+% e. Biosketch. A Biosketch of not more than 1 page, single-spaced should be provided. The biosketch should be written in a narrative format and it should include a summary of previous education, including institutions attended, and research experiences.
+
+%f. A copy of your approved Degree Program Form.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%

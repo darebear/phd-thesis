@@ -1,0 +1,43 @@
+%\documentclass[letterpaper, 10 pt, conference]{ieeeconf}
+\documentclass[twocolumn]{article}
+
+\usepackage{amssymb, amsmath}
+\usepackage{hyperref}        
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[all]{xy}
+\usepackage{subfig}
+
+\input{../commands.tex}
+
+\title{Additional Literature Review}
+\begin{document}
+
+\section{Origami}
+
+What about if origami is used? 
+
+It is clear from figure \ref{fig:mems_origami} that folds that approximate the shape of the screw blade shape can be made from origami. Prof. Azuma also shows, \ref{fig:azumi_origami_convolution}, other ways of creating helices using origami. 
+
+%\im{1}{../../images/lit_review/yan2016_origami_mems_folds.jpg}{caption}
+\image{1}{../../images/lit_review/yan2016_origami_mems_folds.jpg}{yan2016 Controlled Mechanical Buckling for Origami‐Inspired Construction of 3D Microstructures in Advanced Materials}{mems_origami}
+
+\image{1}{../../images/lit_review/azuma_origami_convolution.jpg}{Prof. Azumi's convolution helix}{fig:azumi_origami_convolution} 
+
+This naturally led to the question of whether origami folding models have been developed. \href{https://www.mathworks.com/matlabcentral/fileexchange/51811-origami-mechanism-topology-optimizer-omto}{Fuki and Gillman} have developed OMTO (an origami modeling toolbox for matlab) which uses FEM to set boundary conditions, fixed points, and forced point to calculate fold lines that optimize greatest displacement in specified directions at the output nodes. A continuation of this work is made by \href{https://www.mathworks.com/matlabcentral/fileexchange/69612-origami-topology-optimization-w-nonlinear-truss-model}{Gillman} in 2018, which is an updated version of the prior work sans the GUI. 
+
+\cite{Castle2014} Castle et al programatically tackle the inverse problem of designing cuts and folds in a 2D surface to obtain a given 3D object. The justification of the cuts is that there are features that can be obtained more effectively by removing material.  
+
+
+\cite{Rafsanjani2017} Rafsanjani does stuff 
+
+\subsection{Modeling Results}
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,60 @@
+	The Deepwater Horizon Oil Spill \cite{Silliman2012} was a devastating disaster that resulted in significant amounts of oil release into the Gulf of Mexic. There was a need at this time to assess the effects of the spill in the surrounding areas. Shortly before this disaster, the Aquapod RC \cite{Carlson2011} prototype had been completed and had demonstrated its ability to function in littoral environments. A National Science Foundation Major Research Instrumentation grant was awarded to further develop the Aquapod platform with the goal of developing swarms of Aquapods to help in the assessment of oil spill impact on marshlands surrounding the Gulf of Mexico.  
+
+
+	Over open-waters several methods were applied to contain the effects and spread of contaminants. Chemical dispersants proved to work well when applied aerially, skimmers were effective for collection of oil debris and other contaminants on the water surface ~\cite{Al-Majed2012}. Coastal areas, however, were more difficult to address. Oil collection and detection proved more difficult given the relatively inaccessible terrains, such as the marshes and swamp-like environments. Assessment of toxic chemical concentration and collection of fluid samples in these types of conditions could be cumbersome yet necessary due to residual liquid and solid byproducts.
+
+	This provided an opportunity to employ the Aquapod platform in a real-world scenario. After consultation with a team of research biologists, it was determined that subsurface oil-slick detection would be a key capability. Oil-slick detection by humans alone is a cumbersome process that would require moving about the marshes and then diving to collect fluid samples in potential oil spots. The proposed solution would employ new platforms to carry out the diving portion of the activity and collect electric conductivity, temperature, and depth measurements during an autonomous dive. The researcher would then identify depths at which to collect fluidic samples from the data collected and program the Aquapod to dive and perform sampling tasks. 
+
+	In order to carry out these tasks, a new platform, the Aquapod V1, based on the Aquapod RC, is proposed. The main objectives for this platform would be to enable water quality measurements at depths of up to 10 meters, maintain amphibious function, enable autonomous diving and surfacing, incorporate expandability via sensor backpacks, and feature field programmability, all while maintaining chemical compatibility with salt water, fresh water, and oil. 
+
+	%In order to carry out these tasks, a new platform, the Aquapod V1, based on the Aquapod RC, is proposed. The main objectives would be to enable conductivity and other measurements at a depth of up to 10 meters, maintain tumbling locomotion, enable autonomous diving and surfacing, enable expandability via sensor backpacks, and enable programmability in the field, all while maintaining chemical compatibility with oil, fresh, and salt water. 
+
+	%\subsubsection{Sealing}
+
+	%TODO: Hull
+	%TODO: pressure
+	%TODO: Seal research
+	%TODO: Seal Tests
+
+	\subsubsection{Hull and Sealing}
+
+	The Aquapod RC had an outer hull consisting of two shell parts that compressed a flat waterjet-cut Buna-N gasket to form the main seal. While this design had worked well in initial tests in low-depth endeavours, of up to around 1 foot in depth, tests to higher depth at the University of Minnesota's (UMN) Recreation Center diving well demonstrated that a new design was necessary to achieve sealing to depths of ten meters. 
+
+	The hull design proposed should consist of a similar design in order to fit mission critical components. Onboard computers to handle autonomous underwater function and programmability will be critical, furthermore a larger bladder to enable the BCU to function even with the added mass of water samples. Battery charging and monitoring module in order to enable charging while sealed and also to protect the internal components from short circuits in the case of a leak. Also critical are the sensors such as pressure, temperature, remote control, and GPS. Maintaining tumbling locomotion under the projected additional weight will require larger motors, and therefore a larger battery. 
+
+	\subsubsection{Pressure Testing}
+	Part of the sealing process will involve verification of function of the seals present on the robot. This would involve a protocol to ensure repeatability and to prevent damaging critical component and work done on system integration that would result from a leak. 
+
+	The robot is expected to dive to up to 10 meters of depth, however, the diving well at the Rec Center has a maximum depth of 15 feet, which is roughly 5 meters, therefore a pressure chamber would need to be developed for these tests. Furthermore, a pressure chamber would allow testing in the lab without having to travel to a nearby lake to manually test for pressure and all the additional barriers and difficulties that could present.
+
+	A pressure chamber made of commercially available schedule 40 PVC pipe with a removal end-seal, together with a manometer for monitoring pressure is proposed. The test articles would be lined with litmus paper to detect where a potential leak occurred. The test articles would be placed within the pressure chamber, water would be introduced until submersion, then the chamber would be sealed. The air above the water level would then be pressurized via an inlet on the cap, pressurizing the water as well. Another port on the pressure chamber would allow a pressure gauge connection to monitor pressure levels and a third port with a check valve as a safety device. Proper stress analysis would inform the feasibility of the device, lest the hoop stress exceed material limits and create what is commonly referred to as a pipe bomb.  
+
+	\subsubsection{Locomotion}
+
+	Tumbling locomotion is desired for land and water movement, while also offering the opportunity to add flipper-like attachments for water propulsion. Utilizing the BCU would allow the robot to move vertically in the water column ingesting and expelling water, creating movement within the water column by altering the robot's density. 
+
+
+	\subsubsection{Chemical Compatibility}
+
+	These components, the shell, as well as the motors to actuate a sampling module would be in contact with the fluid and would need to be chemically compatible with oil. Additionally, the stock Micropump peristaltic pump comes stock with Buna-N tubing, which is not compatible with oil, therefore, a substitute tubing would need to be procured. In the case of the BCU, where the tubing is subjected to significant repeating force, a test should be performed to ensure the elastomeric tubing will not fail during function as this would be catastrophic. 
+
+
+	\subsubsection{Programmability and Sensors}
+
+	Underwater autonomy can be accomplished by adding onboard computers to execute a state machine that uses internal and external pressure sensors to determine its buoyancy, its depth, and command the external module to take fluid samples. Furthermore, employing a set of computers for low and high level functions that are able to be programmed from IP68 ports on the hull of the robot would omit opening the shell and increase ease of use while allowing programmability on the field. 
+
+	As a platform it would be expected that one or multiple robots could be equipped with backpack sensor suites capable of carrying out different functions. As such, the mechanical mounting points and the appropriate electrical power and data lines would have to be accounted for in the design of the hull as well as sealing and chemical compatibility considerations. 
+
+	\subsubsection{Results}
+
+	The results of this endeavor can be found in the Preliminary Results Section \ref{sec:aquapod_results}. 
+
+	%	\item \emph{Improve Robustness:} It was determined that 10 meters would be more than sufficient to detect subsurface oil slicks. Quantifying the depth rating of the Aquapod RC and making adjustments if necessary. 
+	%	\item \emph{Add Sensing:} Conductivity, pressure, and temperature sensing, as well as subsurface fluid sampling were desirable. 
+	%	\item \emph{Add Programmability:} to carry out subsurface sampling (where RC signals don't penetrate), but also to implement a state machine that would direct actions such as sampling and control buoyancy.
+	%	\item \emph{Make an Easy to Use Interface:} An easy to use interface that would be simple enough to work out on the field but also be able to carry out commanded tasks. 
+	%	\item \emph{Enhance Electronics:} Addition of a sacrificial fuel gauge board that monitors current usage and intervenes in case of a short circuit to protect other parts of the robot. Fuel gauge also allows charging of multi-cell Lithium Polymer batteries. 
+	%
+
+
+

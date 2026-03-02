@@ -1,0 +1,115 @@
+\documentclass{article}
+%\usepackage{mathabx}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{makecell}
+\usepackage{diagbox}
+
+% RESOURCES: 
+% diagbox link: https://tex.stackexchange.com/questions/17745/diagonal-lines-in-table-cell 
+% arrows: https://tex.stackexchange.com/questions/424948/how-can-i-type-a-curved-arrow-up-in-a-text
+
+
+\usetikzlibrary{arrows.meta}% larger choice of arrow heads
+
+\newcommand\bccw{%
+\mathop{\tikz[scale=0.24]{\draw[thick,-{Triangle[scale=0.5]}]
+              (0,0)to[out=0,in=270](1,1);}}%
+}
+\newcommand\bcw{%
+\mathop{\tikz[scale=0.24]{\draw[thick,-{Triangle[scale=0.5]}]
+              (0,0)to[out=180,in=-90](-1,1);}}
+}
+\newcommand\tcw{%
+\mathop{\tikz[scale=0.24]{\draw[thick,-{Triangle[scale=0.5]}]
+              (0,0)to[out=90,in=180](1,1);}}
+}
+\newcommand\tccw{%
+\mathop{\tikz[scale=0.24]{\draw[thick,-{Triangle[scale=0.5]}]
+              (0,0)to[out=90,in=0](-1,1);}}
+}
+\newcommand\aup{%
+\mathop{\tikz[scale=0.24]{\draw[thick,-{Triangle[scale=0.5]}]
+              (0,0)to[out=90,in=270](0,1)}}
+}
+\newcommand\adown{%
+\mathop{\tikz[scale=0.24]{\draw[thick,-{Triangle[scale=0.5]}]
+              (0,1)to[out=90,in=90](0,0)}}
+}
+\newcommand\bccwdown{%
+\mathop{\tikz[scale=0.24]{\draw[thick,-{Triangle[scale=0.5]}]
+              (0,0)to[out=-90,in=180](1,-1);}}
+}
+\newcommand\bcwdown{%
+\mathop{\tikz[scale=0.24]{\draw[thick,-{Triangle[scale=0.5]}]
+              (0,0)to[out=180,in=90](-1,-1);}}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+\begin{center}
+\begin{tabular}{ |l|c|c|c| }
+  \hline
+  \multicolumn{4}{|c|}{Maneuverability: Soft Terrain} \\
+  \hline
+  \diagbox{ $\omega_l$ }{ $\omega_r$} & CCW & 0 & CW \\ 
+  \hline
+  CCW & $\bcw$ & $\tcw$ & $\aup$\\ 
+  \hline
+  0 & $\bcwdown$ & - & $\tccw$ \\ 
+  \hline 
+  CW & $\adown$ & $\bccwdown$ & $\bccw$\\ 
+  \hline 
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ |l|c|c|c| }
+  \hline
+  \multicolumn{4}{|c|}{Maneuverability: Rigid Terrain} \\
+  \hline
+  %\diagbox[width=5em]{\\ $\omega_l$ }{\\ $\omega_r$} & CCW & 0 & CW \\ 
+  \diagbox{ $\omega_l$ }{ $\omega_r$} & CCW & 0 & CW \\ 
+  \hline
+  CCW & $\leftarrow$ & $\tcw$ & - \\  
+  \hline
+  0 & $\bcwdown$ & - & $\tccw$ \\ 
+  \hline 
+  CW & - & $\bccwdown$ & $\rightarrow$\\ 
+  \hline 
+\end{tabular}
+\end{center}
+
+
+
+
+
+
+%\begin{center}
+%\begin{tabular}{ |c|c|c|c|c|c| }
+  %\hline
+  %\multicolumn{6}{|c|}{Soft Terrain} \\
+  %\hline
+  %%cell1 & cell2 & cell3 & cell1 & cell2 & cell3 \\ 
+  %curvedarrowleft$ & $\curvedarrowright$& cell3 & cell1 & cell2 & cell3 \\ 
+  %\hline
+  %cell1 & cell2 & cell3 & cell1 & cell2 & cell3 \\ 
+  %\hline
+  %cell1 & cell2 & cell3 & cell1 & cell2 & cell3 \\ 
+  %\hline 
+%\end{tabular}
+%\end{center}
+
+\end{document}
